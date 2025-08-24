@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #232526, #414345); /* dark gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1); /* glassy dark card */
+  max-width: 850px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  color: #fff; /* light text */
+  backdrop-filter: blur(10px); /* frosted glass effect */
+}
+
+
+/* Heading */
+h1 {
+  color: gold;
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+/* Section Headings */
+h2 {
+  color: #ffdd93;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Profile Pic */
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid gold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Info */
+.info {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  gap: 20px;
+}
+
+.info p {
+  margin: 6px 0;
+  color: #eee;
+}
+
+/* Links */
+a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+  color: #e6e6e6;
+}
+
+/* Buttons */
+
+
+button:hover {
+  transform: scale(1.05);
+  background: #ff5733;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  padding: 8px 18px;
+  margin: 6px;
+  border-radius: 50px; /* 👈 full pill radius */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.95);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-content {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content img {
+  width: 90%;
+  max-width: 500px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive */
+@media(max-width: 650px) {
+  .info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
